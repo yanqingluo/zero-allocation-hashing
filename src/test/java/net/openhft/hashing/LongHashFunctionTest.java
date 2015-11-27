@@ -146,6 +146,7 @@ public class LongHashFunctionTest {
             sb.append('b');
             assertEquals("string builder off len", eh, f.hashChars(sb, 1, len / 2));
 
+            //yantest  20151-11-27
             // Test for OpenJDK < 7u6, where substring wasn't copied char[] array
             assertEquals("substring", eh, f.hashChars(sb.toString().substring(1, len / 2 + 1)));
 
